@@ -1,1 +1,9 @@
-# FP_2024_lab1
+first
+=====
+
+An OTP application
+
+Build
+-----
+
+    $ rebar3 compile
