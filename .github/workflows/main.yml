@@ -43,7 +43,8 @@ jobs:
       - name: compile task_8_first
         run: cd 8/first && rebar3 compile
       - name: run task_8_first
-        run: cd 8/first/_build/default/lib/first/ebin/ && touch asnw.txt && erl -noshell -s main main -s init stop > answ.txt && cat answ.txt
+        run: cd 8/first && rebar3 shell
+        #run: cd 8/first/_build/default/lib/first/ebin/ && touch asnw.txt && erl -noshell -s main main -s init stop > answ.txt && cat answ.txt
       - name: compile task_8_second
         run: cd 8/second/ && rebar3 compile
       - name: run task_8_second
