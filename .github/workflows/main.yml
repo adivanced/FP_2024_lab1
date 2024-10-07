@@ -40,3 +40,15 @@ jobs:
         run: cd 8/first && rebar3 lint
       - name: lint task_8_second
         run: cd 8/second && rebar3 lint
+      - name: compile task_8_first
+        run: cd 8/first && rebar3 compile
+      - name: run task_8_first
+        run: cd 8/first/_build/default/lib/first/ebin/ && erl -noshell -s main main -s init stop
+      - name: compile task_8_second
+        run: cd 8/second/ && rebar3 compile
+      - name: run task_8_second
+        run: cd 8/second/_build/default/lib/first/ebin/ && erl -noshell -s main main -s init stop
+      - name: compile task_8_third
+        run: cd 8/third/src && make
+      - name: run task_8_third
+        run: cd 8/third/src && ./main
