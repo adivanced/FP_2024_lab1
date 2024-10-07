@@ -43,7 +43,7 @@ jobs:
       - name: compile task_8_first
         run: cd 8/first && rebar3 compile
       - name: compile task_8_third
-        run: cd 8/third && make
+        run: cd 8/third/src && make
 
       # SHOW TASK 23
       - name: lint task_23_first
@@ -53,4 +53,4 @@ jobs:
       - name: compile task_23_first
         run: cd 23/first && rebar3 compile
       - name: compile task_23_third
-        run: cd 23/third && gcc main.c -o main
+        run: cd 23/third/src && gcc main.c -o main
